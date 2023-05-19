@@ -249,3 +249,5 @@ docs/_*.md
 wallaby.conf.js
 tags
 dist
+
+Scripts
