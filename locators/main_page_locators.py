@@ -12,4 +12,6 @@ class MainPageLocators:
 
     LOCATOR_IMPORTANT_QUESTIONS_HEADER = (By.XPATH, './/div[text()]="Вопросы о важном"') # Вопросы о важном заголовок
 
-    LOCATOR_SET_OF_QUESTIONS = [By.XPATH, ".//*[@class='accordion']"]  # Поле с вопросами и ответами
+    LOCATOR_SET_OF_QUESTIONS = [By.XPATH, './/*[@class="accordion"]']  # Поле с вопросами и ответами
+
+    LOCATOR_SCOOTER_TITLE_MAIN_PAGE = (By.XPATH, './/*[text()[contains(., "Привезём его прямо к вашей")]]') # Заголовок главной страницы

@@ -1,22 +1,12 @@
 import pytest
 import allure
-from selenium import webdriver
 from pages.order_page import OrderPage
 from locators.order_page_locators import OrderPageLocators
 
-from pages.base_page import BasePage
 from data import user_1, user_2
 
 
 class TestMakeOrder:
-    driver = None
-
-    @classmethod
-    def setup_class(cls):
-        cls.driver = webdriver.Firefox()
-        cls.driver.get('https://qa-scooter.praktikum-services.ru')
-        base_page = BasePage(cls.driver)
-        base_page.accept_cookies()
 
     @allure.title("Проверка оформления заказа")
     @pytest.mark.parametrize('button, name, surname, address, metro_station, phone_number, rent_date, rent_period,'
@@ -31,19 +21,16 @@ class TestMakeOrder:
                                                                    user_2.rent_period, user_2.black_color,
                                                                    user_2.grey_color, user_2.comment)
                                                                   ])
-    def test_make_order_click_header_order_button(self, button, name, surname, address, metro_station, phone_number,
+    def test_make_order_click_header_order_button(self, driver, button, name, surname, address, metro_station, phone_number,
                                                   rent_date, rent_period,
                                                   black_color, grey_color, comment):
-        order_page = OrderPage(self.driver)
-        self.driver.find_element(*button).click()
+        order_page = OrderPage(driver)
+        order_page.accept_cookies()
+        order_page.mouse_click(button)
 
         order_page.make_order(name, surname, address, metro_station, phone_number, rent_date, rent_period,
                               black_color, grey_color, comment)
 
-        assert self.driver.find_element(*OrderPageLocators.LOCATOR_SUCCESSFUL_ORDER)
+        order_text = order_page.find_element(OrderPageLocators.LOCATOR_SUCCESSFUL_ORDER).text
 
-        self.driver.get('https://qa-scooter.praktikum-services.ru'), 'Ошибка во время оформления заказа'
-
-    @classmethod
-    def teardown_class(cls):
-        cls.driver.quit()
+        assert "Заказ оформлен" in order_text, 'Ошибка во время оформления заказа'

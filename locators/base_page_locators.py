@@ -12,7 +12,7 @@ class BasePageLocators:
     LOCATOR_SCOOTER_LOGO = (By.CLASS_NAME, 'Header_LogoScooter__3lsAR')
 
     # Кнопка Заказать в хэдере
-    LOCATOR_ORDER_BUTTON_HEADER = (By.XPATH, './/div[@class="Header_Nav__AGCXC"]/button[@class="Button_Button__ra12g"]')
+    LOCATOR_ORDER_BUTTON_HEADER = (By.XPATH, './/div[@class="Header_Nav__AGCXC"]/button[text()="Заказать"]')
 
     # Поиск яндекса
-    LOCATOR_YANDEX_SEARCH = (By.XPATH, './/iframe[@class="dzen-search-arrow-common__frame" and @aria-label="Поиск Яндекса"]')
+    LOCATOR_YANDEX_SEARCH = (By.XPATH, './/iframe[@aria-label="Поиск Яндекса"]')

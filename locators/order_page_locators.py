@@ -18,12 +18,12 @@ class OrderPageLocators:
     LOCATOR_DELIVERY_COMMENT_FIELD = (By.XPATH, './/input[@placeholder="Комментарий для курьера"]')     # Поле Комментарий для курьера
 
     LOCATOR_BACK_BUTTON = (By.XPATH, './/button[text()="Назад"]')    # Кнопка Назад
-    LOCATOR_ORDER_BUTTON = (By.XPATH, './/*[contains(@class, "Button_Button__ra12g Button_Middle__1CSJM") and text()="Заказать"]')    # Кнопка Заказать
+    LOCATOR_ORDER_BUTTON = (By.XPATH, './/div[@class="Order_Buttons__1xGrp"]/button[text()="Заказать"]')    # Кнопка Заказать
 
     LOCATOR_MAKE_ORDER_POP_UP = (By.XPATH, './/div[text()="Хотите оформить заказ?"]')
-    LOCATOR_YES_ORDER_BUTTON = (By.XPATH, './/button[@class="Button_Button__ra12g Button_Middle__1CSJM" and text()="Да"]')     # Хотите оформить заказ - кнопка Да
-    LOCATOR_NO_ORDER_BUTTON = (By.XPATH, './/button[@class="Button_Button__ra12g Button_Middle__1CSJM" and text()="Нет"]')  # Хотите оформить заказ - кнопка Нет
-    LOCATOR_SUCCESSFUL_ORDER = (By.XPATH, './/*[@class="Order_ModalHeader__3FDaJ"]')
+    LOCATOR_YES_ORDER_BUTTON = (By.XPATH, './/button[text()="Да"]')     # Хотите оформить заказ - кнопка Да
+    LOCATOR_NO_ORDER_BUTTON = (By.XPATH, './/button[text()="Нет"]')  # Хотите оформить заказ - кнопка Нет
+    LOCATOR_SUCCESSFUL_ORDER = (By.XPATH, './/div[@class="Order_ModalHeader__3FDaJ"]')
 
 
 

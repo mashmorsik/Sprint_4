@@ -36,3 +36,8 @@ class QuestionsDictionary:
         "Можно ли отменить заказ?": "Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.",
         "Я жизу за МКАДом, привезёте?": "Да, обязательно. Всем самокатов! И Москве, и Московской области."
     }
+
+
+class Urls:
+    MAIN_PAGE_URL = 'https://qa-scooter.praktikum-services.ru/'
+    ORDER_PAGE_URL = 'https://qa-scooter.praktikum-services.ru/order'
