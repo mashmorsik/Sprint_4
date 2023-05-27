@@ -19,3 +19,5 @@ tests/.pytest_cache
 Scripts
 
 tests/__init__.py
+
+/.idea
