@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+GeckoDriver*.log
+geckodriver.log
+tests/geckodriver.log
+.pytest_cache
+
+tests/.pytest_cache
+
+Scripts
+
+tests/__init__.py
+
+/.idea
